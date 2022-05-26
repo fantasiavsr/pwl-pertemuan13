@@ -13,8 +13,8 @@ class homeController extends Controller
         return view('home', [
             'data' => $dataHome,
 
-            'c1' => dataHome::find(1)->contentTitle,
-            'c1desc' => dataHome::find(1)->desc,
+            'c1' => dataHome::select('contentTitle')->where('id', '=', 1)->find(1)->contentTitle,
+            'c1desc' => dataHome::select('desc')->where('id', '=', 1)->find(1)->desc,
 
             'c2' => dataHome::find(2)->contentTitle,
             'c2desc' => dataHome::find(2)->desc,

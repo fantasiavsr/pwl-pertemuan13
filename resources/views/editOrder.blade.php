@@ -40,7 +40,7 @@
                                             <td>{{ $data['email'] }}</td>
                                             <td>{{ $data['language'] }}</td>
                                             <td>{{ $data['title'] }}</td>
-                                            <td> - </td>
+                                            <td>{{ $data->category->name; }} </td>
                                             <td>{{ $data['desc'] }}</td>
                                             <td><a class="text-danger text-decoration-none" href={{ "orderDelete/".$data['id'] }}>Delete</a></td>
                                         </tr>

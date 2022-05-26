@@ -18,8 +18,11 @@ return new class extends Migration
             $table->string('email');
             $table->string('language');
             $table->string('title');
+            $table->unsignedBigInteger('category_id'); //associate the address with a user
             $table->string('desc');
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
@@ -33,3 +36,4 @@ return new class extends Migration
         Schema::dropIfExists('orders');
     }
 };
+

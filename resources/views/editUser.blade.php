@@ -29,6 +29,7 @@
                                     <a href="/register"><button class="btn text-light bg-success">Tambah User</button></a>
                                 </div>
 
+                                {{-- Form Search --}}
                                 <div class="col col-md-auto">
                                     <form action="/editUser/cari" method="GET">
                                         <input type="text" name="username" placeholder="username.." value="{{ old('username') }}">
